@@ -1,0 +1,7 @@
+<button class="backButton" routerLink="/home">Back</button>
+
+<div class="pokemon-details-container">
+  <ng-container *ngFor="let p of evolutions; let i = index">
+    <app-poke-card [pokemon]="p" [selected]="pokemon.name === p.name"></app-poke-card>
+  </ng-container>
+</div>

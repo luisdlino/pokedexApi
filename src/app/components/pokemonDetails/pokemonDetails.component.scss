@@ -1,0 +1,25 @@
+.pokemon-details-container {
+  display: flex;
+  margin: auto;
+  width: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.backButton {
+  padding: 10px 30px;
+  border: none;
+  background-color: #70cfee;
+  color: #fff;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 40px;
+  height: 38px;
+  z-index: 9;
+
+  &:hover {
+    background-color: #63b0ca;
+  }
+}
