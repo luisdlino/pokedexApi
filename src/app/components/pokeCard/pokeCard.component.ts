@@ -40,6 +40,7 @@ export class PokeCardComponent {
     this.httpService.getSpecie(poke.name)
       .pipe(
         switchMap((specie: any) => {
+          this.pokemonService.setSelectedPokemonDesc(specie.flavor_text_entries[0].flavor_text)
           return this.httpService.getChain(specie.evolution_chain.url);
         })
     ).subscribe((chain: any) => {

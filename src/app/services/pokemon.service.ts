@@ -6,6 +6,7 @@ export class PokemonService {
   pokemons: Array<Pokemon> = [];
   selectedPokemon!: Pokemon;
   evolutions: Array<Pokemon> = [];
+  selectedPokemonDesc = '';
 
   public setAllPokemons(pokes: Array<Pokemon>) {
     this.pokemons = pokes;
@@ -25,6 +26,14 @@ export class PokemonService {
 
   public getSelectedPokemon() {
     return this.selectedPokemon;
+  }
+
+  public setSelectedPokemonDesc(desc: string) {
+    this.selectedPokemonDesc = desc;
+  }
+
+  public getSelectedPokemonDesc() {
+    return this.selectedPokemonDesc;
   }
 
   public setEvolutions(evo: any) {

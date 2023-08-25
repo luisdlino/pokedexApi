@@ -12,11 +12,13 @@ export class PokemonDetailsComponent implements OnInit{
 
   pokemon!: Pokemon;
   evolutions: Pokemon[] = [];
+  desc = ''
 
   constructor(private pokemonService: PokemonService) {}
 
   ngOnInit() {
     this.pokemon = this.pokemonService.getSelectedPokemon();
     this.evolutions = this.pokemonService.getEvolutions();
+    this.desc = this.pokemonService.getSelectedPokemonDesc().replace('\f','\n');
   }
 }

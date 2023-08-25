@@ -1,4 +1,8 @@
 <button class="backButton" routerLink="/home">Back</button>
+<div class="pokemon-details">
+  <h1>{{pokemon.name | titlecase }}</h1>
+  <h3>{{desc}}</h3>
+</div>
 
 <div class="pokemon-details-container">
   <ng-container *ngFor="let p of evolutions; let i = index">
